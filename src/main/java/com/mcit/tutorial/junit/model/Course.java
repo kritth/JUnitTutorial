@@ -1,7 +1,5 @@
 package com.mcit.tutorial.junit.model;
 
-import com.sun.istack.internal.NotNull;
-
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -14,11 +12,9 @@ public class Course {
     @GeneratedValue(generator = "course_sequence")
     private Long id;
 
-    @NotNull
     @Column(name = "name")
     private String name;
 
-    @NotNull
     @ManyToOne
     @JoinColumn(name = "department_id")
     private Department department;
